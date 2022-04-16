@@ -1,0 +1,94 @@
+using System;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string inputF = Console.ReadLine();
+            string inputS = Console.ReadLine();
+            int count = 0;
+            int count2 = 0;
+            int i, j;
+            String strSort1 = "";
+            String strSort2 = "";
+            char[] strTest = new char[inputF.Length];
+            char[] strTest2 = new char[inputF.Length];
+
+            for (i=0;i< inputF.Length; i++)
+            {
+                strTest[i] = inputF[i];
+                strTest2[i] = inputS[i];
+            }
+
+           
+
+            for (i = 0; i < inputF.Length; i++)
+            {
+                for (j = 0; j < inputF.Length; j++)
+                {
+                    if (strTest[i] == strTest[j])
+                    {
+                        count++;
+
+                        if (strTest2[i] == strTest2[j])
+                        
+                            count2++;
+                        }
+                    }
+                }
+            
+
+                if (count == count2)
+                {
+                    Console.WriteLine("True");
+                    for (i = 0; i < inputF.Length; i++)
+                    {
+                        char c = inputF[i];
+
+                        if (strSort1.IndexOf(c) < 0)
+                        {
+                            strSort1 += c;
+                        }
+                    }
+
+                    for (i = 0; i < inputS.Length; i++)
+                    {
+                        char c = inputS[i];
+
+                        if (strSort2.IndexOf(c) < 0)
+                        {
+                            strSort2 += c;
+                        }
+                    }
+                    char[] storeStr = new char[strSort2.Length];
+                    char[] storeStr2 = new char[strSort2.Length];
+
+                    for (i = 0; i < strSort2.Length; i++)
+                    {
+                        storeStr[i] = strSort1[i];
+                        storeStr2[i] = strSort2[i];
+                    }
+
+
+
+
+
+
+                    for (i = 0; i < storeStr.Length; i++)
+                    {
+                        Console.WriteLine(storeStr[i] + " => " + storeStr2[i]);
+
+                    }
+                }
+
+                else
+                {
+                    Console.WriteLine("False");
+                }
+
+                Console.ReadLine();
+            }
+        }
+    }
