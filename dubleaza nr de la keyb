@@ -1,0 +1,31 @@
+using System;
+
+
+namespace CountOccurrences
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string input = Console.ReadLine();
+            char[] separators = new char[] { ' ' };
+
+            string[] subs = input.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+            int count = 0;
+            string inputData = Console.ReadLine();
+            int positionNo = Convert.ToInt32(inputData);
+            for (int i = 0; i <= positionNo; i++)
+            {
+                if (i == positionNo-1)
+                {
+                    count = Convert.ToInt32(subs[i]);
+                }
+
+
+            }
+
+            Console.WriteLine(count* 2);
+            Console.ReadLine();
+        }
+    }
+}
