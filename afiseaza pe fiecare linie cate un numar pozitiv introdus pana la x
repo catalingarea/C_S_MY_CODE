@@ -1,0 +1,48 @@
+using System;
+
+
+namespace CountOccurrences
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int count = 0;
+            string countNo = "";
+            string line;
+
+            while ((line = Console.ReadLine()) != "x")
+            {
+                int number = Convert.ToInt32(line);
+
+                if (number > 0)
+                {
+                    count++;
+                    countNo += number;
+                }
+
+               
+            }
+            if (count == 0)
+            {
+                Console.WriteLine("N/A");
+
+            }
+
+
+
+            if (count > 1)
+            {
+                foreach (var sub in countNo)
+                {
+                    Console.WriteLine($"{sub}");
+                }
+               
+
+            }
+            Console.ReadLine();
+        }
+            
+        }
+    }
