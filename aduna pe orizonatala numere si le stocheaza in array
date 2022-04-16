@@ -1,0 +1,46 @@
+using System;
+
+
+namespace CountOccurrences
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 0;
+            int meri = 0;
+            int peri = 0;
+            int ciresi = 0;
+
+            int livezi = Convert.ToInt32(Console.ReadLine());
+            int[] stringarr1 = new int[livezi];
+        
+            int[] numaraLivada = new int[livezi];
+            for (i = 0; i < stringarr1.Length; i++)
+            {
+
+                string input = Console.ReadLine();
+                string[] insert = input.Split(' ');
+
+                meri += int.Parse(insert[0]);
+                peri += int.Parse(insert[1]);
+                ciresi += int.Parse(insert[2]);
+                numaraLivada[i] = int.Parse(insert[0])+int.Parse(insert[1])+int.Parse(insert[2]);
+
+
+
+            }
+
+            for (i = 1; i < livezi+1; i++)
+
+            Console.WriteLine("Livada "+ i +": " + numaraLivada[i-1]);
+
+            Console.WriteLine("Meri: " + meri);
+            Console.WriteLine("Peri: " + peri);
+            Console.WriteLine("Ciresi: " + ciresi);
+            Console.ReadLine();
+
+            }
+
+        }
+    }
