@@ -1,0 +1,56 @@
+using System;
+
+
+namespace MyFirstAppication
+{
+
+    class Program
+    {
+        
+
+        static void Main(string[] args)
+        {
+
+
+
+            string number;
+            int biggest = 0;
+
+            while ((number = Console.ReadLine()) != "0")
+            {
+                int number2 = Convert.ToInt16(number);
+
+                if (number2 == 0)
+                {
+                    Console.WriteLine("0");
+                }
+                else
+                {
+                    if (number2 > biggest)
+                        biggest = number2;
+                }
+                
+            }
+            Console.WriteLine("{0:G}",biggest);
+            Console.Read();
+        }
+
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
