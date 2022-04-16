@@ -1,0 +1,54 @@
+using System;
+
+
+namespace CountOccurrences
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string encodedMessageFirstPart = Console.ReadLine();
+            string encodedMessageSecondPart = Console.ReadLine();
+           
+            string message = "";
+            int i = 0;
+
+            if (encodedMessageFirstPart.Length == encodedMessageSecondPart.Length)
+            {
+                for (i = 0; i < encodedMessageFirstPart.Length; i++)
+                {
+                    message += encodedMessageFirstPart[i];
+                    message += encodedMessageSecondPart[i];
+                }
+            }
+           
+
+            if (encodedMessageFirstPart.Length > encodedMessageSecondPart.Length)
+            {
+                for (i = 0; i <= encodedMessageFirstPart.Length + encodedMessageSecondPart.Length; i++)
+                {
+                   
+                    int index = encodedMessageFirstPart.Length - i;
+                    if (i< encodedMessageFirstPart.Length)
+                    {
+                     message+= encodedMessageFirstPart[encodedMessageFirstPart.Length - index];
+                    }
+                    
+                    if ( i< encodedMessageSecondPart.Length)
+                    {
+                        message+= encodedMessageSecondPart[i];
+                    }
+                    
+
+
+                }
+
+                
+            }
+
+            Console.WriteLine(message);
+            Console.ReadLine();
+        }
+
+    }
+}
