@@ -1,0 +1,35 @@
+using System;
+
+
+namespace MyFirstAppication
+{
+
+    class Program
+    {
+
+
+        static void Main(string[] args)
+        {
+
+            string inputData = Console.ReadLine();
+            int n = Convert.ToInt16(inputData);
+            int total=0;
+            while (n > 0)
+            {
+                total +=n*n;
+                n -= 1;
+
+            }
+
+            Console.WriteLine(total);
+            Console.ReadLine();
+
+
+
+        }
+
+
+
+
+    }
+} 
