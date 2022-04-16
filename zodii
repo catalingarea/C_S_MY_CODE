@@ -1,0 +1,77 @@
+ing System;
+
+
+namespace MyFirstAppication
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string zodie = Console.ReadLine();
+            switch (zodie)
+            {
+                case "Berbec":
+                Console.WriteLine("martie");
+                Console.WriteLine("aprilie");
+                    break;
+                case "Taur":
+                    Console.WriteLine("aprilie");
+                    Console.WriteLine("mai");
+                    break;
+                case "Gemeni":
+                    Console.WriteLine("mai");
+                    Console.WriteLine("iunie");
+                    break;
+                case "Rac":
+                    Console.WriteLine("iunie");
+                    Console.WriteLine("iulie");
+                    break;
+                case "Leu":
+                    Console.WriteLine("iulie");
+                    Console.WriteLine("august");
+                    break;
+                case "Fecioara":
+                    Console.WriteLine("august");
+                    Console.WriteLine("septembrie");
+                    break;
+                case "Balanta":
+                    Console.WriteLine("septembrie");
+                    Console.WriteLine("octombrie");
+                    break;
+                case "Scorpion":
+                    Console.WriteLine("octombrie");
+                    Console.WriteLine("noiembrie");
+                    break;
+                case "Sagetator":
+                    Console.WriteLine("noiembrie");
+                    Console.WriteLine("decembrie");
+                    break;
+                case "Capricorn":
+                    Console.WriteLine("decembrie");
+                    Console.WriteLine("ianuarie");
+                    break;
+                case "Varsator":
+                    Console.WriteLine("ianuarie");
+                    Console.WriteLine("februarie");
+                    break;
+                case "pesti":
+                    Console.WriteLine("februarie");
+                    Console.WriteLine("martie");
+                    break;
+                default:
+                    Console.WriteLine("zodie invalida");
+                    break;
+
+            }
+           
+
+
+
+            Console.Read();
+        }
+
+
+          
+
+        }
+    }
