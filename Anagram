@@ -1,0 +1,95 @@
+using System;
+
+namespace Anagram
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string input = Console.ReadLine();
+            double countLetter = input.Length;
+            string orderAlphabetic = Alphabetize(input);
+            int[] countDuplicate = countEachDuplicate(orderAlphabetic);
+            string Duplicate = NameDuplicate(orderAlphabetic);
+
+           
+                double sum = 1;
+                for (int i = 0; i < countDuplicate.Length; i++)
+                {
+                    if (countDuplicate[i] > 1)
+                    {
+                        sum *= Factorial(countDuplicate[i]);
+                    }
+
+                }
+                double factorial = Factorial(countLetter);
+
+                Console.WriteLine(factorial/sum);
+                Console.WriteLine();
+
+           
+        }
+
+         static int[] countEachDuplicate(string inputString)
+        {
+            int j = 0;
+            int[] storeNoOfDuplicate = new int[inputString.Length];
+            while (inputString.Length > 0)
+            {
+                int countChar = 0;
+                for (int i=0;i<inputString.Length; i++)
+                {
+                    if (inputString[0] == inputString[i])
+                    {
+                        countChar++;
+                    }
+                }
+                storeNoOfDuplicate[j++] = countChar;
+                
+                inputString = inputString.Replace(inputString[0].ToString(), string.Empty);
+            }
+            return storeNoOfDuplicate;
+        }
+       
+        private static string Alphabetize(string s)
+        {
+            char[] a = s.ToCharArray();
+            Array.Sort(a);
+            return new string(a);
+        }
+        private static double Factorial(double n)
+        {
+            double factorial = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                factorial *= i;
+            }
+            return factorial;
+        }
+
+        private static string NameDuplicate(string duplicate)
+        {
+
+            
+            string sort = "";
+            string sort2 = "";
+            for (int i = 0; i < duplicate.Length; i++)
+            {
+                char c = duplicate[i];
+                if (sort.IndexOf(c) < 0)
+                {
+                    sort += c;
+
+                }
+                else
+                    sort2 += c;
+
+            }
+
+            string countDuplicate = sort2;
+            return countDuplicate;
+        }
+
+ 
+    }
+}
