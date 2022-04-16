@@ -1,0 +1,35 @@
+using System;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string inputX = Console.ReadLine();
+            int x = Convert.ToInt32(inputX);
+            string inputY = Console.ReadLine();
+            int y = Convert.ToInt32(inputY);
+            int daysM = 0;
+          
+            int i = 0;
+
+
+            while (x>i)
+            {
+
+                daysM += y;
+
+                if (daysM % y == 0 && daysM % x==0)
+                {
+                    break;
+                }
+            }
+
+            Console.WriteLine(daysM);
+            Console.Read();
+
+        }
+    }
+}
