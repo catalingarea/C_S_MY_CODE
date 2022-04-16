@@ -1,0 +1,42 @@
+using System;
+
+
+namespace CountOccurrences
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string  encodedPinNumber = Console.ReadLine();
+         
+            string startPostionString = Console.ReadLine();
+
+            int step = Convert.ToInt32(Console.ReadLine());
+            int i = 0;
+            string pin = "";
+
+            while (i < 1)
+            {
+                {
+                    i++;
+                }
+               
+                int startPostion = startPostionString[0] - 'a';
+                pin += encodedPinNumber[startPostion];
+                pin += encodedPinNumber[startPostion + step];
+                pin += encodedPinNumber[startPostion + 2 * step];
+                pin += encodedPinNumber[startPostion + 3 * step];
+            
+            }
+
+           
+                Console.WriteLine(pin);
+           
+            
+            Console.ReadLine();
+
+        }
+            
+        }
+
+    }
