@@ -1,0 +1,35 @@
+using System;
+
+ class Program
+    {
+        static void Main(string[] args)
+        {
+
+        string input = Console.ReadLine();
+        int x = Convert.ToInt32(input);
+        string insert = Console.ReadLine();
+        int y = Convert.ToInt32(insert);
+
+
+        int combine = Factorial(x) / (Factorial(y) * (Factorial(x - y)));
+
+
+
+        static int Factorial(int n)
+        {
+            int factorial = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                factorial *= i;
+            }
+            return factorial;
+        }
+
+
+
+    
+
+        Console.WriteLine(combine);
+
+            }
+        }
