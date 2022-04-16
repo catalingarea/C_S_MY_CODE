@@ -1,0 +1,41 @@
+using System;
+
+
+namespace MyFirstAppication
+{
+
+    class Program
+    {
+
+
+        static void Main(string[] args)
+        {
+            string number;
+            int total = 0;
+            int numbers = 0;
+
+
+            while
+               ((number = Console.ReadLine()) != "x")
+            {
+
+
+                total += int.Parse(number);
+
+                if (total >= 0)
+                {
+                    numbers++;
+                }
+
+            }
+
+                Console.WriteLine(numbers);
+
+                Console.Read();
+
+
+
+            
+        }
+    }
+}
